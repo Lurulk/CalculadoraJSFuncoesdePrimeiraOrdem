@@ -15,23 +15,23 @@ function potenciar(a, b){
 }
 function calcular(a, b, operacao){
     switch (operacao){
-        case 1:
+        case 'somar':
             console.log(a + "+" + b + "=" + somar(a, b));
             historico.push(a + "+" + b + "=" + somar(a, b));
             break;
-        case 2:
+        case 'subtrair':
             console.log(a + "-" + b + "=" + subtrair(a, b));
             historico.push(a + "-" + b + "=" + subtrair(a, b));
             break;
-        case 3:
+        case 'multiplicar':
             console.log(a + "*" + b + "=" + multiplicar(a, b));
             historico.push(a + "*" + b + "=" + multiplicar(a, b));
             break;
-        case 4:
+        case 'dividir':
             console.log(a + "/" + b + "=" + dividir(a, b));
             historico.push(a + "/" + b + "=" + dividir(a, b));
             break;
-        case 5:
+        case 'potenciar':
             console.log(a + "^" + b + "=" + potenciar(a, b));
             historico.push(a + "^" + b + "=" + potenciar(a, b));
     }
@@ -42,9 +42,9 @@ function historicoOperacoes(){
         console.log(historico[i]);
     }
 }
-calcular(10, 5, 1);
-calcular(2, 5, 2);
-calcular(3, 5, 3);
-calcular(4, 5, 4);
-calcular(5, 5, 5);
+calcular(10, 5, 'somar');
+calcular(2, 5, 'subtrair');
+calcular(3, 5, 'multiplicar');
+calcular(4, 5, 'dividir');
+calcular(5, 5, 'potenciar');
 historicoOperacoes();
