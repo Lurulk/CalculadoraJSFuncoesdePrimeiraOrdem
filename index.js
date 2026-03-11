@@ -38,7 +38,7 @@ function calcular(a, b, operacao){
 }
 let historico = [];
 function historicoOperacoes(){
-    for (let i = 0; i < historico.length; i++) {
+    for (let i = historico.length-1; i =< historico.length-5; i--) {
         console.log(historico[i]);
     }
 }
